@@ -1,23 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uoe-rZ-TNI">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--My Gang View Controller - My Gang Rock-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="MyGangViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="egQ-f5-ODd">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GangCell" id="3JH-ua-Yri">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="Pvp-Gt-dtG" kind="push" id="yHq-BT-f0A"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="CSa-YF-5bK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="egQ-f5-ODd" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="01M-KW-IT7"/>
+                            <constraint firstItem="egQ-f5-ODd" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="bCo-oz-UYz"/>
+                            <constraint firstItem="egQ-f5-ODd" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="wX1-FY-4JE"/>
+                            <constraint firstItem="egQ-f5-ODd" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="xnh-Sk-N9K"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="My Gang Rock" id="CK9-wS-kh5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="664" y="67"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5JS-Uw-uht">
+            <objects>
+                <viewController id="Pvp-Gt-dtG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZDO-lg-fct">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-m9-g8u">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GDS-U8-ij1"/>
+                                    <constraint firstAttribute="width" constant="183" id="vf2-mu-BWC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OXb-m9-g8u" firstAttribute="top" secondItem="ZDO-lg-fct" secondAttribute="top" constant="67" id="GF1-p1-wMY"/>
+                            <constraint firstItem="OXb-m9-g8u" firstAttribute="leading" secondItem="ZDO-lg-fct" secondAttribute="leading" constant="52" id="ZEt-tg-Ptk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TK7-Mb-ccR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ngf-sG-W5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="67"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ebf-zn-4VP">
+            <objects>
+                <navigationController id="uoe-rZ-TNI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PD9-h3-oLr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="eMi-rt-dLm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GrL-QN-SXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="733"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MyGangViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyGangViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

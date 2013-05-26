@@ -18,6 +18,14 @@
 		4957D2DB1752076600603A25 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2DA1752076600603A25 /* Default-568h@2x.png */; };
 		4957D2DE1752076600603A25 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2DC1752076600603A25 /* MainStoryboard.storyboard */; };
 		4957D2E11752076600603A25 /* MyGangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4957D2E01752076600603A25 /* MyGangViewController.m */; };
+		4957D2ED17521B5300603A25 /* mygang.png in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2E717521B5300603A25 /* mygang.png */; };
+		4957D2EE17521B5300603A25 /* mygang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2E817521B5300603A25 /* mygang@2x.png */; };
+		4957D2EF17521B5300603A25 /* yangmei.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2E917521B5300603A25 /* yangmei.jpeg */; };
+		4957D2F017521B5300603A25 /* fuer.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2EA17521B5300603A25 /* fuer.jpeg */; };
+		4957D2F117521B5300603A25 /* cuistnut.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2EB17521B5300603A25 /* cuistnut.jpeg */; };
+		4957D2F217521B5300603A25 /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2EC17521B5300603A25 /* creme_brelee.jpg */; };
+		4957D2F417521B5F00603A25 /* huan.png in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2F317521B5F00603A25 /* huan.png */; };
+		4957D2F617521B9400603A25 /* mygang.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2F517521B9400603A25 /* mygang.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +45,14 @@
 		4957D2DD1752076600603A25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4957D2DF1752076600603A25 /* MyGangViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyGangViewController.h; sourceTree = "<group>"; };
 		4957D2E01752076600603A25 /* MyGangViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyGangViewController.m; sourceTree = "<group>"; };
+		4957D2E717521B5300603A25 /* mygang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mygang.png; sourceTree = "<group>"; };
+		4957D2E817521B5300603A25 /* mygang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mygang@2x.png"; sourceTree = "<group>"; };
+		4957D2E917521B5300603A25 /* yangmei.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yangmei.jpeg; sourceTree = "<group>"; };
+		4957D2EA17521B5300603A25 /* fuer.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fuer.jpeg; sourceTree = "<group>"; };
+		4957D2EB17521B5300603A25 /* cuistnut.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cuistnut.jpeg; sourceTree = "<group>"; };
+		4957D2EC17521B5300603A25 /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
+		4957D2F317521B5F00603A25 /* huan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huan.png; sourceTree = "<group>"; };
+		4957D2F517521B9400603A25 /* mygang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mygang.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +99,20 @@
 		4957D2CA1752076600603A25 /* MyGang */ = {
 			isa = PBXGroup;
 			children = (
+				4957D2F317521B5F00603A25 /* huan.png */,
+				4957D2E717521B5300603A25 /* mygang.png */,
+				4957D2E817521B5300603A25 /* mygang@2x.png */,
+				4957D2E917521B5300603A25 /* yangmei.jpeg */,
+				4957D2EA17521B5300603A25 /* fuer.jpeg */,
+				4957D2EB17521B5300603A25 /* cuistnut.jpeg */,
+				4957D2EC17521B5300603A25 /* creme_brelee.jpg */,
 				4957D2D31752076600603A25 /* MyGangAppDelegate.h */,
 				4957D2D41752076600603A25 /* MyGangAppDelegate.m */,
 				4957D2DC1752076600603A25 /* MainStoryboard.storyboard */,
 				4957D2DF1752076600603A25 /* MyGangViewController.h */,
 				4957D2E01752076600603A25 /* MyGangViewController.m */,
 				4957D2CB1752076600603A25 /* Supporting Files */,
+				4957D2F517521B9400603A25 /* mygang.plist */,
 			);
 			path = MyGang;
 			sourceTree = "<group>";
@@ -164,6 +188,14 @@
 				4957D2D91752076600603A25 /* Default@2x.png in Resources */,
 				4957D2DB1752076600603A25 /* Default-568h@2x.png in Resources */,
 				4957D2DE1752076600603A25 /* MainStoryboard.storyboard in Resources */,
+				4957D2ED17521B5300603A25 /* mygang.png in Resources */,
+				4957D2EE17521B5300603A25 /* mygang@2x.png in Resources */,
+				4957D2EF17521B5300603A25 /* yangmei.jpeg in Resources */,
+				4957D2F017521B5300603A25 /* fuer.jpeg in Resources */,
+				4957D2F117521B5300603A25 /* cuistnut.jpeg in Resources */,
+				4957D2F217521B5300603A25 /* creme_brelee.jpg in Resources */,
+				4957D2F417521B5F00603A25 /* huan.png in Resources */,
+				4957D2F617521B9400603A25 /* mygang.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

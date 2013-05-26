@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyGangViewController : UIViewController
+@interface MyGangViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

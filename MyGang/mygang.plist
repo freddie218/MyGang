@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>profile</key>
+	<array>
+		<string>huan.png</string>
+		<string>cuistnut.jpeg</string>
+		<string>fuer.jpeg</string>
+		<string>yangmei.jpeg</string>
+		<string>creme_brelee.jpg</string>
+		<string>creme_brelee.jpg</string>
+		<string>creme_brelee.jpg</string>
+		<string>creme_brelee.jpg</string>
+		<string>creme_brelee.jpg</string>
+		<string>creme_brelee.jpg</string>
+		<string>creme_brelee.jpg</string>
+	</array>
+	<key>age</key>
+	<array>
+		<string>24</string>
+		<string>27</string>
+		<string>27</string>
+		<string>27</string>
+		<string>33</string>
+		<string>33</string>
+		<string>29</string>
+		<string>27</string>
+		<string>25</string>
+		<string>25</string>
+		<string>27</string>
+	</array>
+	<key>name</key>
+	<array>
+		<string>unclehuan</string>
+		<string>cuistnut</string>
+		<string>fuer</string>
+		<string>muggleyoung</string>
+		<string>husuo</string>
+		<string>michaelchen</string>
+		<string>JPC</string>
+		<string>zation</string>
+		<string>wangni</string>
+		<string>dujuan</string>
+		<string>chaojiwudi</string>
+	</array>
+</dict>
+</plist>
