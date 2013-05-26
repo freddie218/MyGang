@@ -7,6 +7,7 @@
 //
 
 #import "MyGangViewController.h"
+#import "GangDetailViewController.h"
 
 @interface MyGangViewController ()
 
@@ -18,6 +19,8 @@
     NSArray *ages;
     NSArray *profileImage;
 }
+
+@synthesize tableView;
 
 - (void)viewDidLoad
 {
@@ -55,21 +58,14 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UIAlertView *selectAlertMessage = [[UIAlertView alloc] initWithTitle:@"Row Selected"
-//                                                                 message:[tableData objectAtIndex:indexPath.row]
-//                                                                delegate:nil
-//                                                       cancelButtonTitle:@"OK"
-//                                                       otherButtonTitles:nil,
-//                                       nil];
-//    
-//    [selectAlertMessage show];
-//    
-//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-//    
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showGangDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        GangDetailViewController *detailController = segue.destinationViewController;
+        detailController.gangName = [tableData objectAtIndex:indexPath.row];
+    }
+}
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {

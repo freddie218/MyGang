@@ -24,7 +24,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="Pvp-Gt-dtG" kind="push" id="yHq-BT-f0A"/>
+                                            <segue destination="Pvp-Gt-dtG" kind="push" identifier="showGangDetail" id="yHq-BT-f0A"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -42,22 +42,25 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Gang Rock" id="CK9-wS-kh5"/>
+                    <connections>
+                        <outlet property="tableView" destination="egQ-f5-ODd" id="qNU-bN-ADi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="664" y="67"/>
         </scene>
-        <!--View Controller-->
+        <!--Gang Detail View Controller-->
         <scene sceneID="5JS-Uw-uht">
             <objects>
-                <viewController id="Pvp-Gt-dtG" sceneMemberID="viewController">
+                <viewController id="Pvp-Gt-dtG" customClass="GangDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZDO-lg-fct">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-m9-g8u">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="GDS-U8-ij1"/>
+                                    <constraint firstAttribute="height" constant="60" id="dbg-44-8u0"/>
                                     <constraint firstAttribute="width" constant="183" id="vf2-mu-BWC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
@@ -72,6 +75,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TK7-Mb-ccR"/>
+                    <connections>
+                        <outlet property="nameLable" destination="OXb-m9-g8u" id="sRP-rn-WHh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngf-sG-W5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,8 +103,17 @@
         </scene>
     </scenes>
     <classes>
+        <class className="GangDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GangDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nameLable" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="MyGangViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyGangViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
