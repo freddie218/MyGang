@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyGangViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MyGangViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 

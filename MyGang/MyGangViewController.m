@@ -18,6 +18,7 @@
     NSMutableArray *tableData;
     NSArray *ages;
     NSArray *profileImage;
+    NSMutableArray *searchResults;
 }
 
 @synthesize tableView;
@@ -37,7 +38,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [tableData count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+    } else {
+        return [tableData count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -50,7 +55,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    }
+    
 
 //    cell.profileImageView.image = [UIImage imageNamed:[profileImage objectAtIndex:indexPath.row]];
 //    cell.ageLable.text = [ages objectAtIndex:indexPath.row];
@@ -61,9 +71,16 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"showGangDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         GangDetailViewController *detailController = segue.destinationViewController;
-        detailController.gangName = [tableData objectAtIndex:indexPath.row];
+        NSIndexPath *indexPath = nil;
+        
+        if ([self.searchDisplayController isActive]) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            detailController.gangName = [searchResults objectAtIndex:indexPath.row];
+        } else {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            detailController.gangName = [tableData objectAtIndex:indexPath.row];
+        }
     }
 }
 
@@ -73,6 +90,27 @@
     [tableView reloadData];
 }
 
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchText];
+    searchResults = [tableData filteredArrayUsingPredicate:resultPredicate];
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                       objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        [self performSegueWithIdentifier:@"showGangDetail" sender:self];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

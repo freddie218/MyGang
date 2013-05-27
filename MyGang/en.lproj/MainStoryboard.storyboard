@@ -14,9 +14,17 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="egQ-f5-ODd">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="e8T-d4-69J">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="2" id="uBL-sh-kuh"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GangCell" id="3JH-ua-Yri">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="80" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -43,10 +51,20 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Gang Rock" id="CK9-wS-kh5"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="sZc-oh-COR" id="w3Q-Bx-QLm"/>
                         <outlet property="tableView" destination="egQ-f5-ODd" id="qNU-bN-ADi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="sZc-oh-COR">
+                    <connections>
+                        <outlet property="delegate" destination="2" id="Jxk-YX-fkA"/>
+                        <outlet property="searchBar" destination="e8T-d4-69J" id="WHc-La-Bsh"/>
+                        <outlet property="searchContentsController" destination="2" id="n9L-ju-ycu"/>
+                        <outlet property="searchResultsDataSource" destination="2" id="HgY-Dc-cnI"/>
+                        <outlet property="searchResultsDelegate" destination="2" id="Jbj-2f-95a"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="664" y="67"/>
         </scene>
@@ -118,7 +136,7 @@
             </objects>
             <point key="canvasLocation" x="236" y="984"/>
         </scene>
-        <!--About View Controller-->
+        <!--About View Controller - About Our Gang-->
         <scene sceneID="MYm-BB-Sas">
             <objects>
                 <viewController id="mgI-uC-ziZ" customClass="AboutViewController" sceneMemberID="viewController">
@@ -138,7 +156,7 @@
                             <constraint firstItem="Lnj-0C-jP9" firstAttribute="leading" secondItem="QnD-aY-9FI" secondAttribute="leading" type="default" id="uYV-fi-HLx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="EQO-6L-WcO"/>
+                    <navigationItem key="navigationItem" title="About Our Gang" id="EQO-6L-WcO"/>
                     <connections>
                         <outlet property="aboutView" destination="Lnj-0C-jP9" id="BZc-Go-wfG"/>
                     </connections>
