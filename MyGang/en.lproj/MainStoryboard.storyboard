@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uoe-rZ-TNI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="EEr-Ht-01U">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="2" customClass="MyGangViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="egQ-f5-ODd">
@@ -55,7 +55,7 @@
             <objects>
                 <viewController id="Pvp-Gt-dtG" customClass="GangDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZDO-lg-fct">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-m9-g8u">
@@ -87,6 +87,7 @@
         <scene sceneID="ebf-zn-4VP">
             <objects>
                 <navigationController id="uoe-rZ-TNI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="4eE-nw-fV9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PD9-h3-oLr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -99,10 +100,80 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrL-QN-SXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="733"/>
+            <point key="canvasLocation" x="229" y="67"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jLB-O5-lES">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="vCz-Sf-eur" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="Gje-d9-xag"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tfL-Gr-9eg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mgI-uC-ziZ" kind="relationship" relationship="rootViewController" id="DB1-tC-Az1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ly-uY-amn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="984"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="MYm-BB-Sas">
+            <objects>
+                <viewController id="mgI-uC-ziZ" customClass="AboutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QnD-aY-9FI">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnj-0C-jP9">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lnj-0C-jP9" firstAttribute="trailing" secondItem="QnD-aY-9FI" secondAttribute="trailing" type="default" id="2tg-Ug-sXZ"/>
+                            <constraint firstItem="Lnj-0C-jP9" firstAttribute="bottom" secondItem="QnD-aY-9FI" secondAttribute="bottom" type="default" id="A9a-YE-iYJ"/>
+                            <constraint firstItem="Lnj-0C-jP9" firstAttribute="top" secondItem="QnD-aY-9FI" secondAttribute="top" type="default" id="Rpq-3p-vKU"/>
+                            <constraint firstItem="Lnj-0C-jP9" firstAttribute="leading" secondItem="QnD-aY-9FI" secondAttribute="leading" type="default" id="uYV-fi-HLx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EQO-6L-WcO"/>
+                    <connections>
+                        <outlet property="aboutView" destination="Lnj-0C-jP9" id="BZc-Go-wfG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAq-F1-osa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701" y="984"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="M71-oO-8oV">
+            <objects>
+                <tabBarController id="EEr-Ht-01U" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Zbx-Eh-htf">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uoe-rZ-TNI" kind="relationship" relationship="viewControllers" id="OfF-em-64N"/>
+                        <segue destination="vCz-Sf-eur" kind="relationship" relationship="viewControllers" id="XVg-DS-32O"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CtU-oS-PIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="738"/>
         </scene>
     </scenes>
     <classes>
+        <class className="AboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="aboutView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
         <class className="GangDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GangDetailViewController.h"/>
             <relationships>

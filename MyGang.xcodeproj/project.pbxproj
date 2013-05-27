@@ -27,6 +27,9 @@
 		4957D2F417521B5F00603A25 /* huan.png in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2F317521B5F00603A25 /* huan.png */; };
 		4957D2F617521B9400603A25 /* mygang.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2F517521B9400603A25 /* mygang.plist */; };
 		4957D2F9175261A200603A25 /* GangDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4957D2F8175261A200603A25 /* GangDetailViewController.m */; };
+		4957D2FC1753064E00603A25 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4957D2FB1753064E00603A25 /* AboutViewController.m */; };
+		4957D2FF17530B0100603A25 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2FD17530B0100603A25 /* about.html */; };
+		4957D30017530B0100603A25 /* gang_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2FE17530B0100603A25 /* gang_2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,10 @@
 		4957D2F517521B9400603A25 /* mygang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mygang.plist; sourceTree = "<group>"; };
 		4957D2F7175261A200603A25 /* GangDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GangDetailViewController.h; sourceTree = "<group>"; };
 		4957D2F8175261A200603A25 /* GangDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GangDetailViewController.m; sourceTree = "<group>"; };
+		4957D2FA1753064E00603A25 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		4957D2FB1753064E00603A25 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		4957D2FD17530B0100603A25 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		4957D2FE17530B0100603A25 /* gang_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gang_2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +109,8 @@
 		4957D2CA1752076600603A25 /* MyGang */ = {
 			isa = PBXGroup;
 			children = (
+				4957D2FD17530B0100603A25 /* about.html */,
+				4957D2FE17530B0100603A25 /* gang_2.jpg */,
 				4957D2F317521B5F00603A25 /* huan.png */,
 				4957D2E717521B5300603A25 /* mygang.png */,
 				4957D2E817521B5300603A25 /* mygang@2x.png */,
@@ -118,6 +127,8 @@
 				4957D2F517521B9400603A25 /* mygang.plist */,
 				4957D2F7175261A200603A25 /* GangDetailViewController.h */,
 				4957D2F8175261A200603A25 /* GangDetailViewController.m */,
+				4957D2FA1753064E00603A25 /* AboutViewController.h */,
+				4957D2FB1753064E00603A25 /* AboutViewController.m */,
 			);
 			path = MyGang;
 			sourceTree = "<group>";
@@ -201,6 +212,8 @@
 				4957D2F217521B5300603A25 /* creme_brelee.jpg in Resources */,
 				4957D2F417521B5F00603A25 /* huan.png in Resources */,
 				4957D2F617521B9400603A25 /* mygang.plist in Resources */,
+				4957D2FF17530B0100603A25 /* about.html in Resources */,
+				4957D30017530B0100603A25 /* gang_2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +228,7 @@
 				4957D2D51752076600603A25 /* MyGangAppDelegate.m in Sources */,
 				4957D2E11752076600603A25 /* MyGangViewController.m in Sources */,
 				4957D2F9175261A200603A25 /* GangDetailViewController.m in Sources */,
+				4957D2FC1753064E00603A25 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +351,7 @@
 				4957D2E61752076600603A25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
