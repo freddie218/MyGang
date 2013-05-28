@@ -14,8 +14,7 @@
 
 @implementation GangDetailViewController
 
-@synthesize gangName;
-@synthesize nameLable;
+@synthesize fellow;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +30,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    nameLable.text = gangName;
+    self.nameLable.text = fellow.fellowName;
+    self.fellowAge.text = fellow.fellowAge;
+    self.fellowImage.image = [UIImage imageNamed:fellow.fellowImage];
+    
+    NSMutableString *knowledgeStr = [NSMutableString string];
+    for (NSString *know in fellow.fellowKnowledge) {
+        [knowledgeStr appendFormat:@"%@\n", know];
+    }
+    self.fellowKnowledge.text = knowledgeStr;
+
 }
 
 - (void)didReceiveMemoryWarning

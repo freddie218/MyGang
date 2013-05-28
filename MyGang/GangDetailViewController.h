@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Fellow.h"
 
 @interface GangDetailViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UILabel *nameLable;
-@property (nonatomic, strong) NSString *gangName;
+@property (strong, nonatomic) IBOutlet UILabel *fellowAge;
+@property (strong, nonatomic) IBOutlet UIImageView *fellowImage;
+@property (strong, nonatomic) IBOutlet UITextView *fellowKnowledge;
+
+@property (strong, nonatomic) Fellow *fellow;
 
 @end

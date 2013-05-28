@@ -2,6 +2,45 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>knowledge</key>
+	<array>
+		<array>
+			<string>Java</string>
+			<string>Ruby</string>
+			<string>Business Analysis</string>
+			<string>Objective-C</string>
+			<string>Project Management</string>
+			<string>Agile</string>
+		</array>
+		<array>
+			<string>Java</string>
+			<string>Ruby</string>
+			<string>C/C++</string>
+			<string>Agile</string>
+			<string>Drive</string>
+			<string>Stock</string>
+		</array>
+		<array>
+			<string>Java</string>
+			<string>Ruby</string>
+			<string>Frontend</string>
+			<string>Responsive Design</string>
+			<string>Office update</string>
+		</array>
+		<array>
+			<string>Java</string>
+			<string>Ruby</string>
+			<string>Testing</string>
+		</array>
+		<array/>
+		<array/>
+		<array/>
+		<array/>
+		<array/>
+		<array/>
+		<array/>
+		<array/>
+	</array>
 	<key>profile</key>
 	<array>
 		<string>huan.png</string>

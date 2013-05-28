@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="664" y="67"/>
         </scene>
-        <!--Gang Detail View Controller-->
+        <!--Gang Detail View Controller - This Fellow-->
         <scene sceneID="5JS-Uw-uht">
             <objects>
                 <viewController id="Pvp-Gt-dtG" customClass="GangDetailViewController" sceneMemberID="viewController">
@@ -76,25 +76,59 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-m9-g8u">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-m9-g8u">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="dbg-44-8u0"/>
-                                    <constraint firstAttribute="width" constant="183" id="vf2-mu-BWC"/>
+                                    <constraint firstAttribute="height" constant="39" id="CbV-eF-cK4"/>
+                                    <constraint firstAttribute="width" constant="200" id="NzW-Nc-r7W"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="180" verticalHuggingPriority="180" translatesAutoresizingMaskIntoConstraints="NO" id="zf4-0l-gFp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="dTD-Xs-WXi"/>
+                                    <constraint firstAttribute="width" constant="180" id="gqT-AA-NpJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="age" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VA1-u8-3Hw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6B8-9y-TD9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTJ-YC-jDB">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="TuY-ho-Bya"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OXb-m9-g8u" firstAttribute="top" secondItem="ZDO-lg-fct" secondAttribute="top" constant="67" id="GF1-p1-wMY"/>
-                            <constraint firstItem="OXb-m9-g8u" firstAttribute="leading" secondItem="ZDO-lg-fct" secondAttribute="leading" constant="52" id="ZEt-tg-Ptk"/>
+                            <constraint firstItem="OXb-m9-g8u" firstAttribute="leading" secondItem="ZDO-lg-fct" secondAttribute="leading" constant="15" id="5Qr-XZ-lUj"/>
+                            <constraint firstItem="zf4-0l-gFp" firstAttribute="top" secondItem="ZDO-lg-fct" secondAttribute="top" constant="67" id="8cC-8v-yQU"/>
+                            <constraint firstItem="OXb-m9-g8u" firstAttribute="bottom" secondItem="VA1-u8-3Hw" secondAttribute="bottom" type="default" id="T3M-7g-tKA"/>
+                            <constraint firstItem="BTJ-YC-jDB" firstAttribute="top" secondItem="zf4-0l-gFp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TET-QR-sGZ"/>
+                            <constraint firstItem="OXb-m9-g8u" firstAttribute="top" secondItem="ZDO-lg-fct" secondAttribute="top" constant="17" id="ZpU-9k-BFb"/>
+                            <constraint firstAttribute="trailing" secondItem="VA1-u8-3Hw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aLY-2j-c96"/>
+                            <constraint firstAttribute="trailing" secondItem="BTJ-YC-jDB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cT9-x9-YAa"/>
+                            <constraint firstItem="VA1-u8-3Hw" firstAttribute="leading" secondItem="OXb-m9-g8u" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="oSJ-Yw-P0p"/>
+                            <constraint firstItem="OXb-m9-g8u" firstAttribute="leading" secondItem="zf4-0l-gFp" secondAttribute="leading" type="default" id="r84-wA-PDy"/>
+                            <constraint firstItem="BTJ-YC-jDB" firstAttribute="leading" secondItem="zf4-0l-gFp" secondAttribute="leading" type="default" id="shM-vc-CdQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="TK7-Mb-ccR"/>
+                    <navigationItem key="navigationItem" title="This Fellow" id="TK7-Mb-ccR"/>
                     <connections>
-                        <outlet property="nameLable" destination="OXb-m9-g8u" id="sRP-rn-WHh"/>
+                        <outlet property="fellowAge" destination="VA1-u8-3Hw" id="PIJ-lR-iqQ"/>
+                        <outlet property="fellowImage" destination="zf4-0l-gFp" id="64b-1S-bWd"/>
+                        <outlet property="fellowKnowledge" destination="BTJ-YC-jDB" id="zzq-xa-vJh"/>
+                        <outlet property="nameLable" destination="OXb-m9-g8u" id="nZo-cP-Zrn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngf-sG-W5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -195,6 +229,9 @@
         <class className="GangDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GangDetailViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="fellowAge" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fellowImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fellowKnowledge" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="nameLable" candidateClass="UILabel"/>
             </relationships>
         </class>

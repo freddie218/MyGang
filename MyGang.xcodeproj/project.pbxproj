@@ -30,6 +30,10 @@
 		4957D2FC1753064E00603A25 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4957D2FB1753064E00603A25 /* AboutViewController.m */; };
 		4957D2FF17530B0100603A25 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2FD17530B0100603A25 /* about.html */; };
 		4957D30017530B0100603A25 /* gang_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4957D2FE17530B0100603A25 /* gang_2.jpg */; };
+		4957D3031754524200603A25 /* Fellow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4957D3021754524200603A25 /* Fellow.m */; };
+		4957D3051754A94600603A25 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4957D3041754A94600603A25 /* Default.png */; };
+		4957D3071754A94E00603A25 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4957D3061754A94E00603A25 /* Default@2x.png */; };
+		4957D3091754A95700603A25 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4957D3081754A95700603A25 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,11 @@
 		4957D2FB1753064E00603A25 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		4957D2FD17530B0100603A25 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		4957D2FE17530B0100603A25 /* gang_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gang_2.jpg; sourceTree = "<group>"; };
+		4957D3011754524200603A25 /* Fellow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fellow.h; sourceTree = "<group>"; };
+		4957D3021754524200603A25 /* Fellow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fellow.m; sourceTree = "<group>"; };
+		4957D3041754A94600603A25 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4957D3061754A94E00603A25 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4957D3081754A95700603A25 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,9 @@
 		4957D2B81752076600603A25 = {
 			isa = PBXGroup;
 			children = (
+				4957D3081754A95700603A25 /* Default-568h@2x.png */,
+				4957D3061754A94E00603A25 /* Default@2x.png */,
+				4957D3041754A94600603A25 /* Default.png */,
 				4957D2CA1752076600603A25 /* MyGang */,
 				4957D2C31752076600603A25 /* Frameworks */,
 				4957D2C21752076600603A25 /* Products */,
@@ -129,6 +141,8 @@
 				4957D2F8175261A200603A25 /* GangDetailViewController.m */,
 				4957D2FA1753064E00603A25 /* AboutViewController.h */,
 				4957D2FB1753064E00603A25 /* AboutViewController.m */,
+				4957D3011754524200603A25 /* Fellow.h */,
+				4957D3021754524200603A25 /* Fellow.m */,
 			);
 			path = MyGang;
 			sourceTree = "<group>";
@@ -214,6 +228,9 @@
 				4957D2F617521B9400603A25 /* mygang.plist in Resources */,
 				4957D2FF17530B0100603A25 /* about.html in Resources */,
 				4957D30017530B0100603A25 /* gang_2.jpg in Resources */,
+				4957D3051754A94600603A25 /* Default.png in Resources */,
+				4957D3071754A94E00603A25 /* Default@2x.png in Resources */,
+				4957D3091754A95700603A25 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +246,7 @@
 				4957D2E11752076600603A25 /* MyGangViewController.m in Sources */,
 				4957D2F9175261A200603A25 /* GangDetailViewController.m in Sources */,
 				4957D2FC1753064E00603A25 /* AboutViewController.m in Sources */,
+				4957D3031754524200603A25 /* Fellow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "MyGangViewController.h"
 #import "GangDetailViewController.h"
+#import "Fellow.h"
 
 @interface MyGangViewController ()
 
@@ -18,6 +19,9 @@
     NSMutableArray *tableData;
     NSArray *ages;
     NSArray *profileImage;
+    NSArray *knowledges;
+    
+    NSMutableArray *fellows;
     NSMutableArray *searchResults;
 }
 
@@ -34,6 +38,20 @@
     tableData = [[NSMutableArray alloc] initWithArray:[dict objectForKey:@"name"]];
     ages = [dict objectForKey:@"age"];
     profileImage = [dict objectForKey:@"profile"];
+    knowledges = [dict objectForKey:@"knowledge"];
+    
+    fellows = [NSMutableArray arrayWithCapacity:11];
+    
+    for (int i=0; i<11; i++) {
+        Fellow *fellow = [Fellow new];
+        fellow.fellowName = [tableData objectAtIndex:i];
+        fellow.fellowAge = [ages objectAtIndex:i];
+        fellow.fellowImage = [profileImage objectAtIndex:i];
+        fellow.fellowKnowledge = [knowledges objectAtIndex:i];
+        
+        [fellows addObject:fellow];
+    }
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -56,14 +74,10 @@
     }
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-        cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
+        cell.textLabel.text = [[searchResults objectAtIndex:indexPath.row] fellowName];
     } else {
         cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     }
-    
-
-//    cell.profileImageView.image = [UIImage imageNamed:[profileImage objectAtIndex:indexPath.row]];
-//    cell.ageLable.text = [ages objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -76,10 +90,10 @@
         
         if ([self.searchDisplayController isActive]) {
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            detailController.gangName = [searchResults objectAtIndex:indexPath.row];
+            detailController.fellow = [searchResults objectAtIndex:indexPath.row];
         } else {
             indexPath = [self.tableView indexPathForSelectedRow];
-            detailController.gangName = [tableData objectAtIndex:indexPath.row];
+            detailController.fellow = [fellows objectAtIndex:indexPath.row];
         }
     }
 }
@@ -92,8 +106,8 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchText];
-    searchResults = [tableData filteredArrayUsingPredicate:resultPredicate];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"fellowName contains[cd] %@", searchText];
+    searchResults = [fellows filteredArrayUsingPredicate:resultPredicate];
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
